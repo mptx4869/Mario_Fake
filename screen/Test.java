@@ -23,6 +23,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.plaf.basic.BasicButtonUI;
 
+import manager.EnemyManager;
+import entity.Character;
+
 class Intro extends JPanel {
 
     JButton startButton = new JButton("Start");
@@ -71,14 +74,17 @@ class Intro extends JPanel {
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> arr = new ArrayList<>();
-        arr.add(0,9);
-        arr.add(9);
-        arr.add(9);
-        arr.add(9);
-        arr.add(3,10);
-        for(Integer i : arr)
-            System.out.println(i+" ");
+        EnemyManager enemyM = new EnemyManager();
+        Character c = null;
+        EnemyManager.enemies.get(0).blood = 4;
+        try {
+            c =  EnemyManager.enemies.get(0).clone();
+        } catch (CloneNotSupportedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        EnemyManager.enemies.get(0).blood = 1;
+        System.out.println(c.blood +" "+ EnemyManager.enemies.get(0).blood);
     }
 }
 

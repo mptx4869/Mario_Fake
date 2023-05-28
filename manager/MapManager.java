@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 
 public class MapManager {
-    public ArrayList<Map> maps= new ArrayList<Map>();
+    public static ArrayList<Map> maps= new ArrayList<Map>();
     public MapManager(){
         System.out.println("chay");
         getMap();

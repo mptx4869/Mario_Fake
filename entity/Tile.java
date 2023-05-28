@@ -12,11 +12,7 @@ public  class Tile extends Entity {
     }
     @Override
     public void action() {
-        
-    }
-    @Override
-    public void draw(Graphics2D g2, int screenX,int screenY) {
-        
+        System.out.println("Tile class");
     }
 
 }

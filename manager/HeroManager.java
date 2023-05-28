@@ -2,18 +2,18 @@ package manager;
 
 import java.util.ArrayList;
 
-import entity.Load_Entity;
 import entity.Character;
+import entity.Load_Entity;
 import java.io.File;
 
-public class EnemyManager {
-    public static ArrayList<Character> enemies = new ArrayList<>();
-    public EnemyManager(){
-        getEnemies();
+public class HeroManager {
+    public static ArrayList<Character> heros = new ArrayList<>();
+    public HeroManager(){
+        getHeros();
     }
-    public void getEnemies(){
-        String pathFolderImage = "media/entity/enemies";
-        String pathFolderClass = "entity/enemies";
+    public void getHeros(){
+        String pathFolderImage = "media/entity/heros";
+        String pathFolderClass = "entity/heros";
 
         File folderImage = new File(pathFolderImage);
         if(!folderImage.exists()) System.out.println("ERRO: can load Image File : " + folderImage.getAbsolutePath());
@@ -24,6 +24,6 @@ public class EnemyManager {
         Load_Entity loader = new Load_Entity<Character>();
         
         loader.getImage(folderImage);
-        enemies = loader.getClass(folderClass,"entity.enemies.");
+        heros = loader.getClass(folderClass,"entity.heros.");
     }
 }

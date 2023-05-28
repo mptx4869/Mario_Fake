@@ -26,7 +26,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import manager.GamePlay;
 import manager.GameState;
+import manager.MapManager;
 import manager.ScreenManager;
 
 
@@ -62,7 +64,7 @@ public class Intro_Screen extends JPanel {
             @Override
             public void clickOn() {
                 System.out.println("choose start");
-                GamePanel gp = new GamePanel();
+                GamePlayScreen gp = new GamePlayScreen(new GamePlay(MapManager.maps.get(0)));
                 GameState.Play.setScreen(gp);
                 ScreenManager.addPanel(GameState.Play, gp);
                 ScreenManager.changeState(GameState.Play);

@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import manager.EnemyManager;
+import manager.HeroManager;
 import manager.MapManager;
 import manager.ScreenManager;
 import manager.TileManager;
@@ -19,6 +20,7 @@ public class MarioFake{
         MapManager mapM = new MapManager();
         TileManager tileM = new TileManager();
         EnemyManager enemyM=new EnemyManager();
+        HeroManager heroM = new HeroManager();
         JFrame window = new JFrame();
 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -28,8 +30,8 @@ public class MarioFake{
         ScreenManager screenM = new ScreenManager(window);
 
         window.pack();
-        window.setSize(700, 700);
-        window.setMinimumSize(new Dimension(120, 120));
+        window.setSize(614 , 637);
+        window.setMinimumSize(new Dimension(600, 600));
         window.setLocationRelativeTo(null);
         window.setVisible(true);
         

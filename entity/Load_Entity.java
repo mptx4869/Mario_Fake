@@ -24,20 +24,15 @@ import javax.tools.ToolProvider;
 
 
 public class Load_Entity <T> {
-    static ArrayList<BufferedImage> listImages;
+    public static ArrayList<BufferedImage> listImages;
 
     public File classFile;
     public File imageFile;
     public Load_Entity(){
         listImages = new ArrayList<>();
-        // this.classFile = classFile;
-        // this.imageFile = imageFile;
+        
     }
     public void getImage(File imageFile){
-        // String pathFolder = "/GameProject/image/tile";
-        // File folder = new File(pathFolder);
-        // if(!folder.exists()) System.out.println("\nERRO folder "+pathFolder+ " does not exit");
-        
 
         File listImageTile [] = imageFile.listFiles();
         if(listImageTile == null) System.out.println(this.getClass()+"ERRO: listFIle null");
